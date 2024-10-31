@@ -36,11 +36,9 @@ class Settings
                     'label' => 'App Language',
                     'default' => 'en',
                     'type' => 'select',
-                    // Read languages from resources/lang directory
-                    // The ternary operator is only present for now. Since there are no lang files, it returns [], which breaks the frontend, so we return ['en']
-                    'options' => glob(resource_path('lang/*'), GLOB_ONLYDIR) ? array_map('basename', glob(resource_path('lang/*'), GLOB_ONLYDIR)) : ['en'],
+                    'options' => array_map('basename', glob(base_path('lang/*'), GLOB_ONLYDIR)),
+                    'validation' => 'in:' . implode(',', array_map('basename', glob(base_path('lang/*'), GLOB_ONLYDIR))),
                     'required' => true,
-                    'validation' => 'in:' . implode(',', glob(resource_path('lang/*'), GLOB_ONLYDIR) ? array_map('basename', glob(resource_path('lang/*'), GLOB_ONLYDIR)) : ['en']),
                     'override' => 'app.locale',
                 ],
                 [
