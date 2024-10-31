@@ -35,8 +35,8 @@ return [
     'update' => 'Aktualisieren',
     'dashboard' => 'Dashboard',
     'home' => 'Startseite',
-    'tickets' => 'Tickets'
-    'account' => 'Account'
-    'admin' => 'Admin'
-    'shop' => 'Shop'
+    'tickets' => 'Tickets',
+    'account' => 'Account',
+    'admin' => 'Admin',
+    'shop' => 'Shop',
 ];

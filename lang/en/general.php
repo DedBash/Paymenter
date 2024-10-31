@@ -35,10 +35,10 @@ return [
     'update' => 'Update',
     'dashboard' => 'Dashboard',
     'home' => 'Home',
-    'tickets' => 'Tickets'
+    'tickets' => 'Tickets',
     ''
-    'account' => 'Account'
-    'admin' => 'Admin'
-    'shop' => 'Shop'
+    'account' => 'Account',
+    'admin' => 'Admin',
+    'shop' => 'Shop',
 ];
     '' => ''
