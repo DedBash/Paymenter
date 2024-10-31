@@ -1,16 +1,16 @@
 <div class="bg-primary-800 p-6 rounded-lg mt-2">
     <div class="flex flex-col md:flex-row justify-between">
-        <h1 class="text-2xl font-semibold text-white">Tickets</h1>
+        <h1 class="text-2xl font-semibold text-white">{{ __('dashboard.tickets') }}</h1>
         <a href="{{ route('tickets.create') }}" wire:navigate>
             <x-button.primary class="h-fit w-fit">
-                Create Ticket
+                {{ __('dashboard.create_ticket') }}
             </x-button.primary>
         </a>
     </div>
 
     @if($tickets->isEmpty())
         <div class="text-white text-center my-4">
-            No tickets found.
+            {{ __('dashboard.no_tickets') }}
         </div>
     @endif
     <div class="flex flex-col gap-4 my-4">

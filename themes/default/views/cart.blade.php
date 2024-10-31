@@ -62,7 +62,7 @@
             </h2>
             <div class="font-semibold flex items-end gap-2 bg-primary-800 p-2 px-4 rounded-md">
                 @if(!$coupon)
-                    <x-form.input wire:model="coupon" name="coupon" label="Coupon" />
+                    <x-form.input wire:model="coupon" name="coupon" label="{{ __('product.copon') }}" />
                     <x-button.primary wire:click="applyCoupon" class="h-fit !w-fit mb-0.5">
                         {{ __('product.apply') }}
                     </x-button.primary>
@@ -76,7 +76,7 @@
                 @endif
             </div>
             <div class="font-semibold flex justify-between bg-primary-800 p-2 px-4 rounded-md">
-                <h4>Subtotal:</h4> {{ $total->format($total->price - $total->tax) }}
+                <h4>{{ __('product.subtotal') }}</h4> {{ $total->format($total->price - $total->tax) }}
             </div>
             @if ($total->tax > 0)
                 <div class="font-semibold flex justify-between bg-primary-800 p-2 px-4 rounded-md">
@@ -84,7 +84,7 @@
                 </div>
             @endif
             <div class="text-lg font-semibold flex justify-between bg-primary-800 p-2 px-4 rounded-md mt-1">
-                <h4>Total:</h4> {{ $total }}
+                <h4>{{ __('product.total') }}</h4> {{ $total }}
             </div>
 
             @if(count($gateways) > 1)

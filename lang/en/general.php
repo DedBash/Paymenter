@@ -33,4 +33,12 @@ return [
 
     'all_rights_reserved' => 'All rights reserved.',
     'update' => 'Update',
+    'dashboard' => 'Dashboard',
+    'home' => 'Home',
+    'tickets' => 'Tickets'
+    ''
+    'account' => 'Account'
+    'admin' => 'Admin'
+    'shop' => 'Shop'
 ];
+    '' => ''
